@@ -38,7 +38,7 @@ This project have four pages
         </li>
         <li> Register in Page
             <ul>
-                <>If a user not register, user will be register with this page and go to log in for page for log  </li>
+                <li>If a user not register, user will be register with this page and go to log in for page for log  </li>
             </ul>
         </li>
         <li> Explore Page
@@ -47,7 +47,7 @@ This project have four pages
             </ul>
         </li>
 
-        <li> Dashboard
+        <li> Dashboard 
             <ul>
                 <li>If a user log in, user go to dashboard page </li>
                 <li>Dashboard page see two types of link: 
@@ -68,7 +68,9 @@ This project have four pages
                             </ul>
                         </li>
                     </ul>
-                </li> 
+                </li>   
             </ul>
         </li>
-    </ol>
+    </ol> 
+
+                
