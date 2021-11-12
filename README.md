@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Getting Started with "CycleWala" Project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created in:
+<li>React JS </li>
+<li>React Font Awesome</li>
+<li>React Rating</li>
+<li>React Router Dom wih nesting</li>
+<li>React firebase for authentication</li>
+<li>React Bootstrap</li>
+<li>Fully Responsive</li>
+<li>MongoDB Atlas</li>
+<li>Node JS</li>
+<li>Express JS</li>
+<li>Heroku live site</li>
 
-## Available Scripts
+## Live Site Link
 
-In the project directory, you can run:
+This project deploy in netlify website: Live site link: 
 
-### `npm start`
+### Project Feature:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project have four pages
+    <ol>
+        <li> Home Page
+            <ul>
+                <li>Home Page with a header or navbar</li>
+                <li>Home Page with a slider area with new collection</li>
+                <li>Home Page with a six latest products</li>
+                <li>Home Page with a review section</li>
+                <li>Home Page with Contact section</li>
+                <li>Home Page with a footer section</li>
+            </ul>
+        </li>
+        <li> Log in Page
+            <ul>
+                <li>If a user Register with email password, he or she log in with this page or use Google sign in, then user log in  </li>
+            </ul>
+        </li>
+        <li> Register in Page
+            <ul>
+                <>If a user not register, user will be register with this page and go to log in for page for log  </li>
+            </ul>
+        </li>
+        <li> Explore Page
+            <ul>
+                <li>Full product list seen in explore page</li>
+            </ul>
+        </li>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+        <li> Dashboard
+            <ul>
+                <li>If a user log in, user go to dashboard page </li>
+                <li>Dashboard page see two types of link: 
+                    <ul>
+                        <li>If a user just a user is not an admin 
+                            <ul>
+                                <li>User see payment page for pay </li>
+                                <li>My Orders page see user orders and cancel an order option </li>
+                                <li>Review Page for add review of this website or service </li>
+                            </ul>
+                        </li>
+                        <li>If a user just a user is an admin 
+                            <ul>
+                                <li>Make Admin Page, an admin want to create an admin </li>
+                                <li>Add a Product page, an admin create product list for website service </li>
+                                <li>Manage Product Page,if an admin want to manage product example delete product list create this area </li>
+                                <li>Manage All Orders Page,if an admin want to manage orders example delete or update status order list create this area </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li> 
+            </ul>
+        </li>
+    </ol>
