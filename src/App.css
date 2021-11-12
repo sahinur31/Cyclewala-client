@@ -1,5 +1,15 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 400;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 600;
+}
+.theme-color{
+  color: #FF8F00;
+}
+.theme-bg{
+  background-color: #FF8F00 !important;
 }
 
 .App-logo {
