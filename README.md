@@ -46,29 +46,19 @@ This project have four pages
                 <li>Full product list seen in explore page</li>
             </ul>
         </li>
-
         <li> Dashboard 
             <ul>
                 <li>If a user log in, user go to dashboard page </li>
-                <li>Dashboard page see two types of link: 
-                    <ul>
-                        <li>If a user just a user is not an admin 
-                            <ul>
-                                <li>User see payment page for pay </li>
-                                <li>My Orders page see user orders and cancel an order option </li>
-                                <li>Review Page for add review of this website or service </li>
-                            </ul>
-                        </li>
-                        <li>If a user just a user is an admin 
-                            <ul>
-                                <li>Make Admin Page, an admin want to create an admin </li>
-                                <li>Add a Product page, an admin create product list for website service </li>
-                                <li>Manage Product Page,if an admin want to manage product example delete product list create this area </li>
-                                <li>Manage All Orders Page,if an admin want to manage orders example delete or update status order list create this area </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>   
+                <li>Dashboard page see two types of link: </li>
+                <li>If a user just a user is not an admin </li>
+                <li>User see payment page for pay </li>
+                <li>My Orders page see user orders and cancel an order option </li>
+                <li>Review Page for add review of this website or service </li>
+                <li>If a user just a user is an admin </li>
+                <li>Make Admin Page, an admin want to create an admin </li>
+                <li>Add a Product page, an admin create product list for website service </li>
+                <li>Manage Product Page,if an admin want to manage product example delete product list create this area </li>
+                <li>Manage All Orders Page,if an admin want to manage orders example delete or update status order list create this area </li>
             </ul>
         </li>
     </ol> 
