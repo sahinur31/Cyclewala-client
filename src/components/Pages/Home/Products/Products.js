@@ -3,11 +3,12 @@ import { Spinner } from 'react-bootstrap';
 import Zoom from "react-reveal/Zoom";
 import { Link } from 'react-router-dom';
 import Product from '../Product/Product';
+import './Products.css';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://calm-refuge-73180.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data.slice(0,6)));
     }, [])

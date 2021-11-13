@@ -9,7 +9,7 @@ const AddProduct = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/products', data)
+        axios.post('https://calm-refuge-73180.herokuapp.com/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     swal("Added successfully", "success")

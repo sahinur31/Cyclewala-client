@@ -5,7 +5,7 @@ const MakeAdmin = () => {
     const [success,setSuccess] = useState(false);
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://calm-refuge-73180.herokuapp.com/users/admin", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

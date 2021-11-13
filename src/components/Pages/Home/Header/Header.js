@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-// import './Header.css';
+import './Header.css';
 import useAuth from '../../../hooks/useAuth';
 import logo from '../../../images/logo.png';
 import Slide from "react-reveal/Slide";
@@ -9,7 +9,7 @@ import Slide from "react-reveal/Slide";
 const Header = () => {
     const {user, logout} = useAuth();
     return (
-        <Navbar bg="white" variant="dark" sticky="top" collapseOnSelect expand="lg" >
+        <Navbar bg="light" expand="lg" >
                 <Container>
                     <Navbar.Brand href="/home">
                         <Slide left>
@@ -24,9 +24,7 @@ const Header = () => {
                        { 
                         (user?.email) &&
                         <Nav.Link as={Link} className="text-dark" to="/dashboard">Dashboard</Nav.Link>
-                       
                         }
-
                         <Navbar.Text className="text-dark me-2">
                             <a href="#login" className="text-dark">{user?.displayName}</a>
                         </Navbar.Text> 
@@ -38,7 +36,6 @@ const Header = () => {
                             :
                             <button onClick={logout} className="btn theme-bg text-white">Logout</button>
                         }
-                       
                     </Navbar.Collapse>
                     </Slide>
                 </Container>

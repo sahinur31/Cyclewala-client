@@ -48,6 +48,7 @@ const useFirebase = () => {
                 const destination = location?.state?.from || '/';
                 history.push(destination);
                 setAuthError('');
+                window.location.reload();
             })
             .catch((error) => {
                 setAuthError(error.message);
@@ -56,7 +57,6 @@ const useFirebase = () => {
     }
 
     const signInWithGoogle = (location, history) => {
-    
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
@@ -66,6 +66,7 @@ const useFirebase = () => {
                 setAuthError('');
                 const destination = location?.state?.from || '/';
                 history.push(destination);
+                window.location.reload();
             }).catch((error) => {
                 setAuthError(error.message);
             }).finally(() => setIsLoading(false));
@@ -86,13 +87,9 @@ const useFirebase = () => {
          return ()=> unsubscribe()
    },[auth])
 
-   /*  useEffect(() => {
-        fetch(`http://localhost:5000/users/${user?.email}`)
-            .then(res => res.json())
-            .then(data => setAdmin(data.admin))
-    }, [user.email]) */
+   
     useEffect(() => {
-        fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
+        fetch(`https://calm-refuge-73180.herokuapp.com/checkAdmin/${user?.email}`)
           .then((res) => res.json())
           .then((data) => {
             if (data[0]?.role === "admin") {
@@ -115,7 +112,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://calm-refuge-73180.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'

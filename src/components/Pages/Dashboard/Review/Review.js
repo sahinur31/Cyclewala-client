@@ -11,7 +11,7 @@ const Review = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/review', data)
+        axios.post('https://calm-refuge-73180.herokuapp.com/review', data)
             .then(res => {
                 if (res.data.insertedId) {
                     swal("Added successfully", "success")

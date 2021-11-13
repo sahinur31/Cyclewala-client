@@ -6,7 +6,7 @@ const ManageAllOrders = () => {
     const [orders, setOrders] = useState([]);
     const [isUpdated , setIsUpdated] = useState(false)
     useEffect(()=> {
-        fetch('http://localhost:5000/orders/')
+        fetch('https://calm-refuge-73180.herokuapp.com/orders/')
         .then(res => res.json())
         .then(data => {
             setIsUpdated(false)
@@ -22,7 +22,7 @@ const ManageAllOrders = () => {
             status : 'Shipped'
         }
         console.log(updatedOrders)
-        fetch(`http://localhost:5000/updateStatusOrders/${id}` , {
+        fetch(`https://calm-refuge-73180.herokuapp.com/updateStatusOrders/${id}` , {
             method : "PUT",
             headers:{
                 'Content-Type':'application/json'
@@ -38,7 +38,7 @@ const ManageAllOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete');
         if(proceed){
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://calm-refuge-73180.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

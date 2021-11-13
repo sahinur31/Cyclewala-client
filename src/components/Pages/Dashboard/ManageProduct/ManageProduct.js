@@ -5,7 +5,7 @@ import swal from 'sweetalert';
 const ManageProduct = () => {
     const [products, setProducts] = useState([]);
     useEffect(()=> {
-        fetch('http://localhost:5000/products')
+        fetch('https://calm-refuge-73180.herokuapp.com/products')
         .then(res => res.json())
         .then(data => {
             setProducts(data)
@@ -16,7 +16,7 @@ const ManageProduct = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete');
         if(proceed){
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://calm-refuge-73180.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE',
             })

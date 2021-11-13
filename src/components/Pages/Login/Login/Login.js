@@ -4,6 +4,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import swal from 'sweetalert';
 import useAuth from '../../../hooks/useAuth';
+import logo from "../../../images/logo.png";
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
@@ -28,12 +29,14 @@ const Login = () => {
         signInWithGoogle(location, history)
     }
     return (
+
     <div className="register-area py-5 text-center">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-4">
-            <div className="register border p-3">
-              <h2 className="py-3 theme-color">Log in Your Account</h2>
+            <div className="register border p-3 rounded">
+              <img style={{width: "80px"}} src={logo} alt="" />
+              <h4 className="py-3 theme-color">Log in Your Account</h4>
               
                 <form onSubmit={handleLoginSubmit}>
                   
@@ -68,7 +71,7 @@ const Login = () => {
               {authError &&
                 swal("Something went wrong!", `${authError}`, "error")}
                 </form>
-                <p>------------------------</p>
+                <p>-----------OR-------------</p>
                     <button onClick={handleGoogleSignIn} className="btn theme-bg text-white mb-3"> Continue with Google</button>
             </div>
           </div>

@@ -12,14 +12,14 @@ const Purchase = () => {
     const { id } = useParams();
     const [product, setProduct] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://calm-refuge-73180.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data));
     }, [id,product])
     const onSubmit = data => {
         const price = product.price;
         data.price =price; 
-        fetch('http://localhost:5000/purchase', {
+        fetch('https://calm-refuge-73180.herokuapp.com/purchase', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

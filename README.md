@@ -1,4 +1,4 @@
-# Getting Started with "CycleWala" Project:
+# Getting Started with "CycleWala" Project Client Side:
 
 This project was created in:
 <li>React JS </li>
@@ -15,7 +15,7 @@ This project was created in:
 
 ## Live Site Link
 
-This project deploy in netlify website: Live site link: 
+This project deploy in netlify website: Live site link: (https://cycle-wala-99d26.web.app/)
 
 ### Project Feature:
 
