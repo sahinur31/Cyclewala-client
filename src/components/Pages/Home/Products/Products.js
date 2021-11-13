@@ -9,7 +9,7 @@ const Products = () => {
     useEffect(() => {
         fetch('http://localhost:5000/products')
             .then(res => res.json())
-            .then(data => setProducts(data));
+            .then(data => setProducts(data.slice(0,6)));
     }, [])
     return (
         <div className="latest-product py-5 text-center">

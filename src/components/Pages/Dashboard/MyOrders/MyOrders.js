@@ -35,7 +35,7 @@ const MyOrders = () => {
             <div className="p-2" style={{backgroundColor: '#F4F7FC',minHeight:'90vh'}}>
                 <h4 className="py-3">See your Orders Here</h4>
                 <div className="order-single p-4">
-                        <Table striped bordered>
+                        <Table striped bordered responsive>
                                 <thead>
                                     <tr>
                                         <th>Id</th>

@@ -24,7 +24,7 @@ const ClientReview = () => {
 
         <div className="row">
           {reviews?.map((pd) => (
-            <div className="col-md-4">
+            <div key={pd._id} className="col-md-4">
               <div className="cart">
                 <div className="cart-details">
                   <img className="w-25 mb-3" src={pd.img} alt="" />

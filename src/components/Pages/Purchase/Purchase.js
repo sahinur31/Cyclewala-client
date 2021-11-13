@@ -15,13 +15,10 @@ const Purchase = () => {
         fetch(`http://localhost:5000/products/${id}`)
             .then(res => res.json())
             .then(data => setProduct(data));
-    }, [id])
+    }, [id,product])
     const onSubmit = data => {
-        
-        
         const price = product.price;
         data.price =price; 
-
         fetch('http://localhost:5000/purchase', {
             method: 'POST',
             headers: {
@@ -64,15 +61,12 @@ const Purchase = () => {
                             <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
 
                                 <input className="form-control p-3 mb-3" defaultValue={user.displayName} {...register("name")} />
-
                                 <input className="form-control p-3 mb-3" defaultValue={user.email} {...register("email", { required: true })} />
                                 {errors.email && <span className="error">This field is required</span>}
                                 <input className="form-control p-3 mb-3" placeholder="Status" defaultValue={"pending"} {...register("status")} />
-
                                 <textarea {...register("address" , { required: true })} type="text" className="form-control p-3 mb-3" placeholder="Your Address" cols="30" rows="5"></textarea>
                                 <input className="form-control p-3 mb-3" placeholder="City" defaultValue="" {...register("city")} />
                                 <input className="form-control p-3 mb-3" placeholder="phone number" defaultValue="" {...register("phone")} />
-
                                 <input className="btn theme-bg text-white" type="submit" value="Purchase Now" />
                             </form>
                         </div>

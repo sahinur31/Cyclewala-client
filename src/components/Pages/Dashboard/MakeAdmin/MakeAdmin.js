@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 const MakeAdmin = () => {
     const { register, handleSubmit, reset } = useForm();
+    const [success,setSuccess] = useState(false);
 
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/makeAdmin", {
+    fetch("http://localhost:5000/users/admin", {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -12,6 +13,7 @@ const MakeAdmin = () => {
       .then((res) => res.json())
       .then(data => {
         if (data.inserted) {
+            setSuccess(true);
             reset();
         }
     });
@@ -32,14 +34,13 @@ const MakeAdmin = () => {
                     type="email"
                     {...register("email", { required: true })}
                     />
-                    <br />
-
                     <input
                     className="submit-btn btn theme-bg mt-3"
                     type="submit"
                     value="Make as Admin"
                     />
                 </form>
+                {success && <span className="text-primary">Make admin successfully</span>}
             </div>
 
         </div>

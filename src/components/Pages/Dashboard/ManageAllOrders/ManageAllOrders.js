@@ -11,7 +11,6 @@ const ManageAllOrders = () => {
         .then(data => {
             setIsUpdated(false)
             setOrders(data)
-            console.log(data)
         })
     }, [isUpdated])
     
@@ -20,7 +19,7 @@ const ManageAllOrders = () => {
         console.log(id , orders)
         const updatedOrders = {
             ...orders,
-            status : 'approved'
+            status : 'Shipped'
         }
         console.log(updatedOrders)
         fetch(`http://localhost:5000/updateStatusOrders/${id}` , {
@@ -59,7 +58,7 @@ const ManageAllOrders = () => {
             <div className="p-2" style={{backgroundColor: '#F4F7FC',minHeight:'90vh'}}>
                 <h4 className="py-3">Please Manage All Orders Here</h4>
                 <div className="order-single">
-                        <Table striped bordered>
+                        <Table striped bordered responsive>
                                 <thead>
                                     <tr>
                                         

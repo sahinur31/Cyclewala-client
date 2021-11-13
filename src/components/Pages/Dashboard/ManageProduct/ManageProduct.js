@@ -36,7 +36,7 @@ const ManageProduct = () => {
             <div className="p-4" style={{backgroundColor: '#F4F7FC',minHeight:'90vh'}}>
                 <h4 className="py-3">Please Manage Product Here</h4>
                 <div className="order-single">
-                        <Table striped bordered>
+                        <Table striped bordered responsive>
                                 <thead>
                                     <tr>
                                         

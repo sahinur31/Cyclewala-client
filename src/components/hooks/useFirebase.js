@@ -11,6 +11,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [authError, setAuthError] = useState('');
+    const [isAdmin, setIsAdmin] = useState(false);
     // const [admin, setAdmin] = useState(false);
 
     const auth = getAuth();
@@ -45,7 +46,7 @@ const useFirebase = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 const destination = location?.state?.from || '/';
-                history.replace(destination);
+                history.push(destination);
                 setAuthError('');
             })
             .catch((error) => {
@@ -55,38 +56,53 @@ const useFirebase = () => {
     }
 
     const signInWithGoogle = (location, history) => {
+    
         setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 const user = result.user;
+                setUser(user);
                 saveUser(user.email, user.displayName, 'PUT');
                 setAuthError('');
                 const destination = location?.state?.from || '/';
-                history.replace(destination);
+                history.push(destination);
             }).catch((error) => {
                 setAuthError(error.message);
             }).finally(() => setIsLoading(false));
     }
 
     // observer user state
-    useEffect(() => {
-        const unsubscribed = onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUser(user);
-            } else {
-                setUser({})
-            }
-            setIsLoading(false);
-        });
-        return () => unsubscribed;
-    }, [auth])
+    useEffect(() =>{
+        const unsubscribe = onAuthStateChanged(auth , (user)=> {
+           
+             if(user){
+                  
+                 setUser(user)
+             } else{
+                 setUser({})
+             }
+             setIsLoading(false)
+        })
+         return ()=> unsubscribe()
+   },[auth])
 
-    /* useEffect(() => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+   /*  useEffect(() => {
+        fetch(`http://localhost:5000/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user.email]) */
-
+    useEffect(() => {
+        fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
+          .then((res) => res.json())
+          .then((data) => {
+            if (data[0]?.role === "admin") {
+              setIsAdmin(true);
+            } else {
+              setIsAdmin(false);
+            }
+          });
+      }, [user?.email]);
+      console.log(isAdmin);
     const logout = () => {
         setIsLoading(true);
         signOut(auth).then(() => {
@@ -111,6 +127,8 @@ const useFirebase = () => {
 
     return {
         user,
+        // admin,
+        isAdmin,
         isLoading,
         authError,
         registerUser,

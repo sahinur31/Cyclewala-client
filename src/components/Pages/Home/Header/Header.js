@@ -7,7 +7,7 @@ import logo from '../../../images/logo.png';
 import Slide from "react-reveal/Slide";
 
 const Header = () => {
-    const {user, logout} = useAuth() || {};
+    const {user, logout} = useAuth();
     return (
         <Navbar bg="white" variant="dark" sticky="top" collapseOnSelect expand="lg" >
                 <Container>
@@ -22,13 +22,9 @@ const Header = () => {
                         <Nav.Link as={Link} className="text-dark" to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} className="text-dark" to="/explore">Explore</Nav.Link>
                        { 
-                       (user?.email) &&
-                       <>
-                       <Nav.Link as={Link} className="text-dark" to="/dashboard">Dashboard</Nav.Link>
-                        {/* <Nav.Link as={Link} className="text-dark" to="/addFood">Add Food</Nav.Link>
-                        <Nav.Link as={Link} className="text-dark" to="/myorders">My Orders</Nav.Link>
-                        <Nav.Link as={Link} className="text-dark" to="/manageorders">Manage All Orders</Nav.Link> */}
-                        </>
+                        (user?.email) &&
+                        <Nav.Link as={Link} className="text-dark" to="/dashboard">Dashboard</Nav.Link>
+                       
                         }
 
                         <Navbar.Text className="text-dark me-2">
