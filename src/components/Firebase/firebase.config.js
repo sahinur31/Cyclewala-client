@@ -1,10 +1,12 @@
+// console.log(firebaseConfig);
 const firebaseConfig = {
-  apiKey: "AIzaSyA-P9Xo4ZhK0JV-QxPzP2_iUeN9YV4XrXQ",
-  authDomain: "cycle-wala-99d26.firebaseapp.com",
-  projectId: "cycle-wala-99d26",
-  storageBucket: "cycle-wala-99d26.appspot.com",
-  messagingSenderId: "230440739507",
-  appId: "1:230440739507:web:402c533432db5e553d46c6"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  
 };
 
 export default firebaseConfig;
